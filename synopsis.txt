@@ -1,0 +1,47 @@
+data>0-b(720), 1-m(586) - 128*128, .png
+train = .6
+validation,test = .2,.2
+only b were splitted (432,144,144) 
+t,v,t_data are numpy arrays contains b images (351,117,118)
+? what is use of validation while having test,train 
+	for checking overfitting during training in middle we use the model to check validation set if difference between accuracy of validation and training is very large that means model is overfitting then we stop the training
+
+
+TESTDICT ??
+m are splitted
+
+train_data,validation_data,test_data are again reinstiated now only contains m images 
+dataset structure> b-720
+		   m-586
+		   train>b,m
+		   test>b,m
+		   validation>b,m
+		   testdata>
+Model -- what are the parameters to be consider to build model ?
+
+sequential+
+conv2d(KERNAL_INTIALIZER,KERNEL_REGULARIZER)+ ACTIVAION + MAXPOOLING2D + 32>32>64 +
+ flatten + dense+ activation(relu)+dropout+dense+activation(softmax)
+
+plotmodel using tf.keras.utils  	for picture of model
+compile - different  - loss, optimizr, metrics acc
+batch_size ??? use what will happen if we increase or decrease it? 
+ImageDataGenerator does it store images generated or directly pass into it while training, testing,validating,? 
+we are directly passing train, validation folder paths but those folders contains 2 different folder how does it do things? 
+
+train_data, validation,test = 783,261,262(b+m)  but how? 
+fit - not data traingenearator passed,verbose,steps_per_epoch,epochs
+
+what are metrics used - acc history ? 
+explain plt properties ep
+what is loss? 
+
+why both graphs are showing different values of train,validation accuracy while actually t.a= 88% v.a = 80%
+test_datagen
+test_acc = 88
+
+1 epoch each time it improved by 88 -> 90
+
+confusion matrix - whAT DOES IT REPRESENT, WHY IMPO, F1 SCORE,SUPPORT,RECALL, HOW TO PLOT? SPECIFICITY,SENSITY=IVITY
+? 
+
